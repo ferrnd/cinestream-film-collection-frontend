@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineStream</title>
+
+    <link rel="stylesheet" href="../assets/style/createprofile.css">
+    <link rel="stylesheet" href="../assets/style/blobs.css">
+    <link rel="stylesheet" href="../assets/style/responsive.css">
+</head>
+<body>
+
+ <div class="blobs">
+        <div class="blobs_glass"></div>
+        <div class="blobs_items">
+            <div class="blob blob--blue"></div>
+            <div class="blob blob--blue"></div>
+            <div class="blob blob--purple"></div>
+            <div class="blob blob--purple"></div>
+            <div class="blob blob--white"></div>
+            <div class="blob blob--pink"></div>
+        </div>
+    </div>
+
+<div class="modal">
+    <h1>Adicionar Perfil</h1>
+    <p>Adiciona um perfil para outra pessoa usando CineStream</p>
+
+
+    <!-- Parte Feita por Inteligência Artificial, pois não possuía o conhecimento para salvar locamente, e para adição de imagens personalizadas. -->
+    <div class="profile-box">
+
+        <label for="avatarInput" class="avatar avatar-select">
+            <img id="avatarPreview" src="../assets/images/defaultuser.jpeg" alt="avatar" />
+        </label>
+
+        <input id="profileName" type="text" placeholder="Nome do Perfil">
+        <input id="avatarInput" type="file" accept="image/*" style="display:none">
+    </div>
+
+    <div style="width:100%; display:flex; flex-direction:column; align-items:center;">
+        <button class="btn-save" id="saveBtn">Salvar</button>
+        <a href="../index.html"><button class="btn-cancel">Cancelar</button></a>
+    </div>
+</div>
+
+      <script src="../assets/javaScript/blobs.js"></script>
+      <script src="../assets/javaScript/saveProfile.js"></script>
+</body>
+</html>
