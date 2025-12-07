@@ -1,0 +1,50 @@
+/* responsive.css
+   Estilos responsivos para diferentes tamanhos de tela. (IA)
+*/
+
+.container, .modal { box-sizing: border-box; }
+
+@media (max-width: 1024px) {
+  .modal {
+    width: 360px;
+    height: auto;
+    padding: 30px;
+  }
+
+  .search-container { max-width: 480px; margin: 0 12px; }
+
+  .card { width: 220px; height: 140px; }
+  .carousel { gap: 16px; }
+
+  .btn-save, .btn-cancel { width: 100% !important; }
+}
+
+@media (max-width: 768px) {
+  .topbar { flex-direction: column; align-items: stretch; padding: 12px; gap:8px; }
+  .search-container { order: 2; width: 100%; margin: 6px 0; max-width: none; }
+  .right { order: 1; display: flex; justify-content: flex-end; gap: 8px; }
+
+  .modal { width: 92vw; padding: 20px; height: auto; }
+  .profile-box.stack { gap: 10px; }
+
+  .carousel { padding-left: 8px; padding-right: 8px; }
+  .card { width: 180px; }
+  .card-grid { justify-content: center; }
+
+  .sidebar { display: none; }
+}
+
+@media (max-width: 480px) {
+  .modal { width: 95vw; padding: 14px; }
+  .modal h1 { font-size: 20px; }
+
+  .btn-save, .btn-cancel { width: 100% !important; padding: 12px; font-size: 16px; }
+
+  .search { min-width: 0; }
+  .nav-btn { padding: 6px 8px; font-size: 14px; }
+
+  .banner-content { left: 12px; bottom: 60px; max-width: 86%; padding: 12px; }
+
+  .card { width: 140px; height: 100px; }
+  .carousel { gap: 12px; }
+}
