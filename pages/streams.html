@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Stream</title>
+    <link rel="stylesheet" href="../assets/style/streams.css" />
+    <link rel="stylesheet" href="../assets/style/responsive.css" />
+</head>
+
+<body>
+    <div class="movie-container">
+        <div class="movie-background">
+            <div id="trailer-placeholder"></div>
+        </div>
+
+        <div class="movie-content">
+            <div class="movie-flex-wrapper">
+                <div class="movie-main-info">
+                    <div class="title-action-wrapper">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                            <a href="../pages/home.html" class="btn" style="text-decoration:none;">← Voltar</a>
+                            <h1 id="movie-title" class="movie-title"></h1>
+                            <div id="movie-meta" style="margin-left:8px;color:#cfcfcf;font-size:0.9rem;">
+                                <span id="movie-id"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="movie-info" class="movie-info"></p>
+                    <div class="movie-stats">
+                        <span id="movie-score" class="stat-item score"></span>
+                        <span id="movie-rating" class="stat-item rating"></span>
+                        <span id="movie-duration" class="stat-item duration"></span>
+                        <span id="movie-episodes" class="stat-item episodes"></span>
+                    </div>
+
+
+                    <p id="movie-description" class="movie-description"></p>
+                </div>
+
+                <div class="movie-poster-sidebar">
+                    <img id="movie-poster" src="" alt="Pôster do Filme" class="movie-poster" />
+                </div>
+            </div>
+
+            <div class="movie-section">
+                <h3>Elenco</h3>
+                <p id="movie-cast"></p>
+            </div>
+
+            <div class="movie-section">
+                <h3>Gêneros</h3>
+                <p id="movie-genres"></p>
+            </div>
+        </div>
+
+        <!-- Seção de Comentários, parte de integração com backend (IA) -->
+        <div class="movie-section comments-section">
+                        <h2>Comentários</h2>
+
+            <div class="novo-comentario-container">
+                <h3>Escreva seu Comentário</h3>
+                <form id="form-novo-comentario">
+                    <input type="text" id="input-nome" placeholder="Seu Nome/Usuário" required>
+                    <textarea id="textarea-comentario" placeholder="Escreva seu comentário aqui..." rows="4"
+                        required></textarea>
+                    <button type="submit" id="btn-enviar-comentario" class="btn primary-btn">
+                        Enviar Comentário
+                    </button>
+                </form>
+            </div>
+                        <div id="lista-comentarios">
+                                <p>Carregando comentários...</p>
+                            </div>
+        </div>
+
+        <script src="../assets/javaScript/streams.js" type="module"></script>
+
+</body>
+
+</html>
