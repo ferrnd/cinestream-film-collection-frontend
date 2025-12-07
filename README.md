@@ -48,13 +48,10 @@ The database is powered by **PostgreSQL** and its structure is defined by the fo
 | Prisma Model Name | Actual Table Name | Description | Key Relationships |
 | :--- | :--- | :--- | :--- |
 | `Genero` | **Gêneros** | Stores the different **categories** (e.g., Action, Sci-Fi). | One-to-Many with `stream` and `StreamDB`. |
-| `stream` | **Stream** | Represents film/series entries (one type of content). | Many-to-One with `Genero` (via `generoId`). |
 | `StreamDB` | **StreamDB** | Represents film/series entries (a second, more detailed type of content). | Many-to-One with `Genero` (via `generoId`). |
-| `Comentario` | **Comentarios** | Stores user comments for specific content cards. | No explicit foreign key defined in the model, relates via `idFilmeCard` (a String identifier). |
+| `Comentario` | **Comentarios** | Stores user comments for specific content cards. | No foreign key defined in the model. |
 
 ### **Prisma Schema Details**
-
-Based on your schema, the relationships are structured as **One-to-Many**:
 
 * A **`Genero`** (e.g., "Action") can be associated with **multiple** entries in both the `stream` and `StreamDB` tables.
 * The `stream` and `StreamDB` models reference `Genero` using the foreign key **`generoId`**.
@@ -109,10 +106,13 @@ Replace 'usuario', 'senha', 'localhost', '5432', and 'untiled_db' with your actu
 
 Follow this sequence of commands in your terminal to initialize Prisma, run the migrations, and generate the Prisma client:
 
-prisma init --datasource-provider 
-prisma migrate dev --name 
-npx prisma generate
-npx prisma studio
+**npx prisma init --datasource-provider postgresql**
+
+**npx prisma migrate dev --name init**
+
+**npx prisma generate**
+
+**npx prisma studio**
 
 ### start the back-end server using the following command: npm run dev
 
