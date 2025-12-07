@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -89,10 +88,6 @@ input {
     color: #dfdfdf;
     background: transparent;
     cursor: pointer;
-}
-
-.avatar img, .avatar {
-  cursor: pointer;
 }
 
 .avatar img {
