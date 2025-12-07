@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CineStream</title>
+
+<link rel="stylesheet" href="../assets/style/home.css">
+<link rel="stylesheet" href="../assets/style/blobs.css">
+<link rel="stylesheet" href="../assets/style/responsive.css">
+</head>
+<body>
+
+<div class="blobs">
+<div class="blobs_glass"></div>
+<div class="blobs_items">
+<div class="blob blob--blue"></div>
+<div class="blob blob--blue"></div>
+<div class="blob blob--purple"></div>
+<div class="blob blob--purple"></div>
+<div class="blob blob--white"></div>
+<div class="blob blob--pink"></div>
+</div>
+</div>
+
+<header class="topbar">
+    <button id="menuBtn" class="menu-btn">☰</button>
+
+    <div class="search-container">
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Pesquisar títulos..." 
+            class="search"
+        >
+        <!-- Utilizado IA -->
+        <label for="filterRating" class="sr-only">Classificação</label>
+        <select id="filterRating" class="search-filter">
+          <option value="">Classificação</option>
+          <option value="Livre">Livre</option>
+          <option value="10">10</option>
+          <option value="12">12</option>
+          <option value="14">14</option>
+          <option value="16">16</option>
+          <option value="18">18</option>
+        </select>
+
+        <label for="filterYear" class="sr-only">Ano</label>
+        <select id="filterYear" class="search-filter">
+          <option value="">Ano</option>
+
+        </select>
+
+        <button id="clearFiltersBtn" class="btn small">Limpar</button>
+    </div>
+    <div class="right">
+      <a href="../pages/home.html"><button class="nav-btn">Home</button></a>
+      <a href="perfis.html"><button class="nav-btn">Perfis</button></a>
+      <a href="../index.html"><button class="nav-btn nav-btn--highlight">Login</button></a>
+    </div>
+</header>
+
+<aside id="leftSidebar" class="sidebar hidden">
+<nav>
+<ul>
+<li data-cat="todos">Todos</li>
+<li data-cat="terror">Terror</li>
+<li data-cat="acao">Ação</li>
+<li data-cat="animacao">Animação</li>
+<li data-cat="aventura">Aventura</li>
+<li data-cat="suspense">Suspense</li>
+<li data-cat="ficcao_cientifica">Ficção Científica</li>
+<li data-cat="drama">Drama</li>
+<li data-cat="comedia">Comédia</li>
+<li data-cat="romance">Romance</li>
+</ul>
+</nav>
+</aside>
+
+<section class="banner no-js-banner">
+<img src="https://wallpaperaccess.com/full/2235781.jpg">
+<div class="banner-fade"></div>
+<div class="banner-content">
+<h2>Perfect Blue</h2>
+<p>Perfect Blue é uma obra-prima de Satoshi Kon que transcende o rótulo de "apenas animação". É um thriller psicológico neo-noir intenso e perturbador que mergulha nas profundezas da identidade, da fama tóxica e da psicose.</p>
+</div>
+</section>
+
+<main class="main">
+
+  <div id="resultsContainer" class="card-grid">
+        </div>
+
+<div id="originalContent">
+
+<div class="row">
+<h3>Ação e Aventura Épica</h3>
+<div class="carousel">
+
+<a href="streams.html?id=naruto_shippuden" class="card" data-id="naruto_shippuden">
+  <img src="https://is3-ssl.mzstatic.com/image/thumb/QL_BoZgvNAWrJuw0GTa_FA/2000x1125.jpg">
+</a>
+
+<a href="streams.html?id=django_livre" class="card" data-id="django_livre">
+  <img src="https://is4-ssl.mzstatic.com/image/thumb/AG3LG2sApM2zQPTsYOQ8PA/1200x675.jpg">
+</a>
+<a href="streams.html?id=gladiador" class="card" data-id="gladiador">
+  <img src="https://ntvb.tmsimg.com/assets/p24674_v_h10_al.jpg?w=1280&h=720">
+</a>
+<a href="streams.html?id=frozen" class="card" data-id="frozen">
+  <img src="https://wallpapercave.com/wp/wp1987840.png">
+</a>
+<a href="streams.html?id=pulp_fiction_tempo_de_violencia" class="card" data-id="pulp_fiction_tempo_de_violencia">
+  <img src="https://tse2.mm.bing.net/th/id/OIP.wXIU79GnS6vSccYnjhuvLwHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3">
+</a>
+<a href="streams.html?id=one_piece" class="card" data-id="one_piece">
+  <img src="https://2.bp.blogspot.com/-gIfQ0txw79I/VCp_ZA75t5I/AAAAAAAAFJc/tuemEZPnqjQ/s1600/Logo%2BOne_Piece.png">
+</a>
+<a href="streams.html?id=vingadores_ultimato" class="card" data-id="vingadores_ultimato">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/1852cfe91feeaaac33b649156c137d7c5cf9f7dec990596543c3f70945d3a3fc.jpg">
+</a>
+<a href="streams.html?id=o_senhor_dos_aneis_a_sociedade_do_anel" class="card" data-id="o_senhor_dos_aneis_a_sociedade_do_anel">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.BG69N7SHYbSqw74E7OEsvQAAAA?w=320&h=180&rs=1&pid=ImgDetMain&o=7&rm=3">
+</a>
+<a href="streams.html?id=star_wars_uma_nova_esperanca" class="card" data-id="star_wars_uma_nova_esperanca">
+  <img src="../assets/images/starwars.jpg">
+</a>
+<a href="streams.html?id=o_labirinto_do_fauno" class="card" data-id="o_labirinto_do_fauno">
+  <img src="../assets/images/fauno.jpg">
+</a>
+<a href="streams.html?id=liga_da_justica" class="card" data-id="liga_da_justica">
+  <img src="../assets/images/liga.png">
+</a>
+<a href="streams.html?id=vinland_saga" class="card" data-id="vinland_saga">
+  <img src="https://tse2.mm.bing.net/th/id/OIP.6CFqm1uvIiMiFzuzpJlPZgHaD5?rs=1&pid=ImgDetMain&o=7&rm=3">
+</a>
+
+<a href="streams.html?id=hunter_x_hunter" class="card" data-id="hunter_x_hunter">
+  <img src="https://th.bing.com/th/id/R.cefe2c5b5716d2310ac07600e6759214?rik=bS2O4jIhgczcVg&pid=ImgRaw&r=0">
+</a>
+<a href="streams.html?id=samurai_champloo" class="card" data-id="samurai_champloo">
+  <img src="https://images.plex.tv/photo?size=large-1280&url=https:%2F%2Fmetadata-static.plex.tv%2F2%2Fgracenote%2F2462b764020c6d9bf6b8765eec15a5bb.jpg">
+<a href="streams.html?id=parasyte" class="card" data-id="parasyte">
+  <img src="https://img.odcdn.com.br/wp-content/uploads/2024/04/imagem_2024-04-29_232056066.png">
+
+</a>
+
+<a href="streams.html?id=the_umbrella_academy" class="card" data-id="https://flxt.tmsimg.com/assets/p21865553_b_h9_aa.jpg">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.SVaVDPsE1ePi079eTiINqwHaEK?w=1536&h=864&rs=1&pid=ImgDetMain&o=7&rm=3">
+</a>
+</div>
+</div>
+
+<div class="row">
+<h3>Suspense, Mistério e Crime</h3>
+<div class="carousel">
+<a href="streams.html?id=ilha_do_medo" class="card" data-id="ilha_do_medo">
+  <img src="https://http2.mlstatic.com/D_NQ_NP_948015-MLA73908655029_012024-B.webp">
+</a>
+<a href="streams.html?id=a_origem" class="card" data-id="a_origem">
+  <img src="../assets/images/a_origem.png">
+</a>
+<a href="streams.html?id=psicose" class="card" data-id="psicose">
+  <img src=https://cinepop.com.br/wp-content/uploads/2022/12/scale.jpg">
+</a>
+<a href="streams.html?id=death_note" class="card" data-id="death_note">
+  <img src="https://i0.wp.com/oblogpave.wordpress.com/wp-content/uploads/2017/03/death-note.jpg?fit=1200%2C750&ssl=1">
+</a>
+<a href="streams.html?id=scooby_doo_cade_voce" class="card" data-id="scooby_doo_cade_voce">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/adee703c18752692177ddb9a2975951a71e9b4dbd8be05763768e15c366dcba2.jpg">
+</a>
+<a href="streams.html?id=you" class="card" data-id="you">
+  <img src="https://i.ytimg.com/vi/PkU46uppFI0/maxresdefault.jpg">
+</a>
+<a href="streams.html?id=ozark" class="card" data-id="ozark">
+  <img src="../assets/images/ozark.png">
+</a>
+<a href="streams.html?id=true_detective" class="card" data-id="true_detective">
+  <img src="https://poltronanerd.com.br/wp-content/uploads/2017/03/poltrona-true-detective-terceira-temporada.jpg">
+</a>
+<a href="streams.html?id=mindhunter" class="card" data-id="mindhunter">
+  <img src="../assets/images/mindhunter.png">
+</a>
+<a href="streams.html?id=gravity_falls_um_verao_de_misterios" class="card" data-id="gravity_falls_um_verao_de_misterios">
+  <img src="../assets/images/gravity_falls.png">
+</a>
+<a href="streams.html?id=lost" class="card" data-id="lost">
+  <img src="../assets/images/lost.png">
+</a>
+</div>
+</div>
+
+<div class="row">
+<h3>Ficção Científica e Fantasia</h3>
+<div class="carousel">
+  <a href="streams.html?id=matrix" class="card" data-id="matrix">
+    <img src="https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2020/11/Screen-Shot-2021-05-19-at-12.59.41-PM.png?fit=2400%2C1600&ssl=1">
+  </a>
+  <a href="streams.html?id=cowboy_bebop" class="card" data-id="cowboy_bebop">
+    <img src="https://img.odcdn.com.br/wp-content/uploads/2021/06/fun-FUN-CBY-JPN_S1-Full-Image_GalleryCover-en-US-1489784785929._UR19201080_RI_.jpg">
+  </a>
+<a href="streams.html?id=interestelar" class="card" data-id="interestelar">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/144718a9727062e06b9ebb1e1e7cc389d6eb2a6732dff8ae688c6487eebbdef8.jpg">
+</a>
+<a href="streams.html?id=de_volta_para_o_futuro" class="card" data-id="de_volta_para_o_futuro">
+  <img src="https://static.wixstatic.com/media/40ba0e_49dfcf9f7d4d4e3db9a93d33fe016019~mv2.jpg/v1/fill/w_1000,h_594,al_c,q_90,usm_0.66_1.00_0.01/40ba0e_49dfcf9f7d4d4e3db9a93d33fe016019~mv2.jpg">
+</a>
+<a href="streams.html?id=westworld" class="card" data-id="westworld">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/73ef6b064e3c1d56aeb0916887d2d1642999ae25057953baab1e11f9a89b486b.jpg">
+</a>
+<a href="streams.html?id=stranger_things" class="card" data-id="stranger_things">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Stranger_Things_logo.png">
+</a>
+<a href="streams.html?id=rick_and_morty" class="card" data-id="rick_and_morty">
+  <img src="../assets/images/rick_and_morty.png">
+</a>
+<a href="streams.html?id=e_t_o_extraterrestre" class="card" data-id="e_t_o_extraterrestre">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJJeqMeSZ8g5V_I0ANZ6_KF-FzO_DfaB1ooskHKk7Wj95qT9ygEglfu3K-HX-3z7UkBuDqAD3AY4b8e4f7alNHLw74-QjBV7ZdFkW57NYea0R_lI0WFvwd7zryD11e4vyFeDUOkx66vMU/w1200-h630-p-k-no-nu/et.png">
+</a>
+<a href="streams.html?id=donnie_darko" class="card" data-id="donnie_darko">
+  <img src="../assets/images/donnie_darko.png">
+</a>
+<a href="streams.html?id=neon_genesis_evangelion" class="card" data-id="neon_genesis_evangelion">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/5aebe5495ba8d8233a7f7065aae472a0ccf6e7fb4b772e9835845a6b97cb10ad.png">
+</a>
+<a href="streams.html?id=steins_gate" class="card" data-id="steins_gate">
+  <img src="../assets/images/steings.png">
+</a>
+<a href="streams.html?id=dr_stone" class="card" data-id="dr_stone">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/b44853ca6948c251198292e3f4048a166304a7063d8488357e78fdaf55f1e19d.jpg">
+</a>
+<a href="streams.html?id=laboratorio_de_dexter" class="card" data-id="laboratorio_de_dexter">
+  <img src="../assets/images/dexter_laboratorio.png">
+</a>
+<a href="streams.html?id=final_space" class="card" data-id="final_space">
+  <img src="https://cinepop.com.br/wp-content/uploads/2019/11/final-space.jpg">
+</a>
+<a href="streams.html?id=black_mirror" class="card" data-id="black_mirror">
+  <img src="https://portaln10.com.br/wp-content/uploads/2025/03/black-mirror-poster-gbqux8n5pndwjdrn.jpg">
+</a>
+<a href="streams.html?id=dark" class="card" data-id="dark">
+  <img src="https://cineset.com.br/wp-content/uploads/2020/06/dark.jpg">
+</a>
+<a href="streams.html?id=diarios_de_um_vampiro" class="card" data-id="diarios_de_um_vampiro">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/d5a54cff89a7ab4b30722b8b9cd7e9ca964ff8ac9a37990d7d169d96c9693625.jpg">
+</a>
+<a href="streams.html?id=game_of_thrones" class="card" data-id="game_of_thrones">
+  <img src="https://t.ctcdn.com.br/UR_7l5dPbvvFP2Sc9qqfF2369t8=/640x360/smart/i350335.jpeg">
+</a>
+<a href="streams.html?id=the_witcher" class="card" data-id="the_witcher">
+  <img src="../assets/images/the_witcher.png">
+</a>
+</div>
+</div>
+
+<div class="row vertical">
+<h3>Os Mais Vistos de Ação</h3>
+<div class="carousel">
+<a href="streams.html?id=naruto" class="card" data-id="naruto">
+  <img src="https://m.media-amazon.com/images/I/91MBi0bj6yL._AC_UF1000,1000_QL80_.jpg">
+</a>
+<a href="streams.html?id=naruto_the_last" class="card" data-id="naruto_the_last">
+  <img src="https://www.critic.de/fileadmin/Images/2016/08/The_Last-_Naruto_The_Movie_-_Plakat.jpg">
+</a>
+<a href="streams.html?id=attack_on_titan" class="card" data-id="attack_on_titan">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.CQBf97rfrqnPoM-V7h_pdgAAAA?rs=1&pid=ImgDetMain&o=7&rm=3">
+</a>
+<a href="streams.html?id=black_clover" class="card" data-id="black_clover">
+  <img src="../assets/images/black_cover.png">
+</a>
+<a href="streams.html?id=dragon_ball_z" class="card" data-id="dragon_ball_z">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/334f00b53cf3ef848ea7048b25711bc98e8236ce1685a096990c80d0965835ea.png">
+</a>
+<a href="streams.html?id=hora_de_aventura" class="card" data-id="hora_de_aventura">
+  <img src="https://br.web.img3.acsta.net/pictures/14/04/22/09/03/422873.jpg">
+</a>
+<a href="streams.html?id=the_walking_dead" class="card" data-id="the_walking_dead">
+  <img src="https://m.media-amazon.com/images/M/MV5BYWQwMGRhNGEtZTNhMy00MzVjLWJhMjItYjcwMDljMTkyNTg2XkEyXkFqcGc@._V1_.jpg">
+</a>
+<a href="streams.html?id=princess_mononoke" class="card" data-id="princess_mononoke">
+  <img src="https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_.jpg">
+</a>
+<a href="streams.html?id=my_hero_academia" class="card" data-id="my_hero_academia">
+  <img src="https://m.media-amazon.com/images/M/MV5BY2QzODA5OTQtYWJlNi00ZjIzLThhNTItMDMwODhlYzYzMjA2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+</a>
+<a href="streams.html?id=demon_slayer_kimetsu_no_yaiba" class="card" data-id="demon_slayer_kimetsu_no_yaiba">
+  <img src="https://br.web.img3.acsta.net/pictures/19/09/18/13/46/0198270.jpg">
+</a>
+<a href="streams.html?id=la_casa_de_papel" class="card" data-id="la_casa_de_papel">
+  <img src="https://data.jigsawpuzzle.co.uk/clementoni.8/netflix-la-casa-de-papel-jigsaw-puzzle-1000-pieces.83209-1.fs.jpg">
+</a>
+<a href="streams.html?id=jujutsu_kaisen" class="card" data-id="jujutsu_kaisen">
+  <img src="https://m.media-amazon.com/images/M/MV5BMjBlNTExMDAtMWZjZi00MDc5LWFkMjgtZDU0ZWQ5ODk3YWY5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+</a>
+<a href="streams.html?id=fullmetal_alchemist_brotherhood" class="card" data-id="fullmetal_alchemist_brotherhood">
+  <img src="https://upload.wikimedia.org/wikipedia/en/7/7e/Fullmetal_Alchemist_Brotherhood_key_visual.png">
+</a>
+<a href="streams.html?id=mob_psycho_100" class="card" data-id="mob_psycho_100">
+  <img src="https://m.media-amazon.com/images/I/71QPSuw+DYL._AC_SL1024_.jpg">
+</a>
+<a href="streams.html?id=esquadrao_suicida" class="card" data-id="esquadrao_suicida">
+  <img src="../assets/images/esquadrao_suicida.png">
+</a>
+<a href="streams.html?id=code_geass_lelouch_of_the_rebellion" class="card" data-id="code_geass_lelouch_of_the_rebellion">
+  <img src="../assets/images/code_geass.png">
+</a>
+<a href="streams.html?id=bleach" class="card" data-id="bleach">
+  <img src="../assets/images/bleach.png">
+</a>
+<a href="streams.html?id=the_boys" class="card" data-id="the_boys">
+  <img src="../assets/images/the_boys.png">
+</a>
+<a href="streams.html?id=batman_a_serie_animada" class="card" data-id="batman_a_serie_animada">
+  <img src="../assets/images/batman_animated.png">
+</a>
+<a href="streams.html?id=yu_yu_hakusho" class="card" data-id="yu_yu_hakusho">
+  <img src="../assets/images/yuyu.png">
+</a>
+<a href="streams.html?id=as_meninas_superpoderosas" class="card" data-id="as_meninas_superpoderosas">
+  <img src="https://br.web.img2.acsta.net/pictures/15/05/20/17/18/336796.jpg">
+</a>
+<a href="streams.html?id=samurai_jack" class="card" data-id="samurai_jack">
+  <img src="https://m.media-amazon.com/images/M/MV5BNjU4ZmVhZGMtNTU4Yy00YmZhLTlmOGQtNGMwMTcwNTEyZjQ0XkEyXkFqcGc@._V1_.jpg">
+</a>
+<a href="streams.html?id=pokemon" class="card" data-id="pokemon">
+  <img src="https://m.media-amazon.com/images/M/MV5BMzE0ZDU1MzQtNTNlYS00YjNlLWE2ODktZmFmNDYzMTBlZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+</a>
+</div>
+</div>
+<div class="row">
+<h3>Drama e Histórias Emocionantes</h3>
+<div class="carousel">
+  <a href="streams.html?id=forrest_gump_o_contador_de_historias" class="card" data-id="forrest_gump_o_contador_de_historias">
+    <img src="https://i.ytimg.com/vi/vDY_uZAaU7g/maxresdefault.jpg">
+  </a>
+  <a href="streams.html?id=clube_da_luta" class="card" data-id="clube_da_luta">
+    <img src="../assets/images/clube_da_luta.png">
+  </a>
+    <a href="streams.html?id=the_fragrant_flower" class="card" data-id="the_fragrant_flower">
+      <img src="../assets/images/the_fragrant_flower.png">
+    </a>
+    <a href="streams.html?id=o_poderoso_chefao" class="card" data-id="o_poderoso_chefao">
+      <img src="https://portaln10.com.br/wp-content/uploads/2025/04/O-Poderoso-Chefao-scaled.jpg">
+    </a>
+    <a href="streams.html?id=violet_evergarden" class="card" data-id="violet_evergarden">
+      <img src="https://gqcanimes.com.br/wp-content/uploads/2018/07/Violet-Evergarden-GQCA-filme.jpg">
+    </a>
+    <a href="streams.html?id=your_lie_in_april" class="card" data-id="your_lie_in_april">
+      <img src="https://mechanicalanimereviews.com/wp-content/uploads/2017/09/your-lie-in-april.jpeg">
+    </a>
+    <a href="streams.html?id=a_lista_de_schindler" class="card" data-id="a_lista_de_schindler">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-1lYS6_ZAynds3M08XuZJWR7sdT89neQFiiPnSDRrwKp0UZwhIFHEiAMAmMVXiywMh_UlRd9QAv3bL5SaBbp7jwVrn6sAoXGoEjs4DI51PSUiReQSOgisG0TzIszxN0ymFl8DnbpE2g8/s1600/a+lista+de+schindler.png">
+    </a>
+<a href="streams.html?id=orange" class="card" data-id="orange">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/28bf5c1f665966174cdf4595b1fcbdf23d7d245fd2f2ba1434140777ffeebf39.jpg">
+</a>
+<a href="streams.html?id=cidade_de_deus" class="card" data-id="cidade_de_deus">
+  <img src="../assets/images/cidade_de_deus.png">
+</a>
+<a href="streams.html?id=o_show_de_truman" class="card" data-id="o_show_de_truman">
+  <img src="../assets/images/the_truman_show.png">
+</a>
+<a href="streams.html?id=a_espera_de_um_milagre" class="card" data-id="a_espera_de_um_milagre">
+  <img src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/d438e592-c8ae-4f79-a3be-a58b94b14e5b/c38e3956-73a8-4a56-bf53-4144ae42b1b2?host=wbd-images.prod-vod.h264.io&partner=beamcom">
+</a>
+<a href="streams.html?id=haikyu" class="card" data-id="haikyu">
+  <img src="../assets/images/haikyu.png">
+</a>
+<a href="streams.html?id=breaking_bad" class="card" data-id="breaking_bad">
+  <img src="../assets/images/breaking_bad.png">
+</a>
+<a href="streams.html?id=o_gambito_da_rainha" class="card" data-id="o_gambito_da_rainha">
+  <img src="https://i.ytimg.com/vi/KoD1DaIlUng/maxresdefault.jpg">
+</a>
+<a href="streams.html?id=the_crown" class="card" data-id="the_crown">
+  <img src="../assets/images/the_crown.png">
+</a>
+<a href="streams.html?id=house_of_cards" class="card" data-id="house_of_cards">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/ec7bc828f18cfe1116b82aa1b92f392ad953367349a5113cf19bb4fcd2a1ba1a.jpg">
+</a>
+<a href="streams.html?id=grey_s_anatomy" class="card" data-id="grey_s_anatomy">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/6bf80de6533fc84dba99e7040457dbbc9eee25165d94e4dd1ed139a4706eed4e._BR-6_AC_SX720_FMpng_.png">
+</a>
+<a href="streams.html?id=euphoria" class="card" data-id="euphoria">
+  <img src="../assets/images/euphoria.png">
+</a>
+<a href="streams.html?id=titanic" class="card" data-id="titanic">
+  <img src="https://i.ytimg.com/vi/9tfoVAuHsag/maxresdefault.jpg">
+</a>
+</div>
+</div>
+
+
+<div class="row">
+<h3>Comédia e Animação Clássica</h3>
+<div class="carousel">
+<a href="streams.html?id=o_grande_hotel_budapeste" class="card" data-id="o_grande_hotel_budapeste">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.qSACuilyenQJND77gR3EBgAAAA?rs=1&pid=ImgDetMain&o=7&rm=3">
+</a>
+<a href="streams.html?id=friends" class="card" data-id="friends">
+  <img src="https://th.bing.com/th/id/R.7ea32b822919286aca708b8216b66e07?rik=YlbGWxxtiqCelQ&pid=ImgRaw&r=0">
+</a>
+<a href="streams.html?id=irmao_do_jorel" class="card" data-id="irmao_do_jorel">
+  <img src="https://manualgeek.com.br/wp-content/uploads/2024/09/irmao-do-jorel.jpg">
+</a>
+<a href="streams.html?id=titio_avo" class="card" data-id="titio_avo">
+  <img src="https://i.ytimg.com/vi/ZC4QNd3s1lg/maxresdefault.jpg">
+</a>
+<a href="streams.html?id=spy_x_family" class="card" data-id="spy_x_family">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.6cTNeMXPUdbhJHtlFE1CNgHaDt?rs=1&pid=ImgDetMain&o=7&rm=3">
+</a>
+<a href="streams.html?id=the_office_us" class="card" data-id="the_office_us">
+  <img src="https://www.peacocktv.com/dam/growth/assets/Library/TheOffice/office-social-min.png">
+</a>
+<a href="streams.html?id=one_punch_man" class="card" data-id="one_punch_man">
+  <img src="https://external-preview.redd.it/one-punch-man-season-3-episode-2-preview-images-v0-V0eF1V34rGwCAWYuxwhkayRPdO2sv_RXH0APAAH8rqY.jpeg?width=640&crop=smart&auto=webp&s=72e0faf2cd096dc4286658a7cb3399f96b177fa7">
+</a>
+<a href="streams.html?id=kaguya_sama_love_is_war" class="card" data-id="kaguya_sama_love_is_war">
+  <img src="https://wallpapercave.com/wp/wp4051808.jpg">
+</a>
+<a href="streams.html?id=clarencio_o_otimista" class="card" data-id="clarencio_o_otimista">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.ytl_zbkQzu31B6Me4iaUVwHaEF?rs=1&pid=ImgDetMain&o=7&rm=3">
+</a>
+<a href="streams.html?id=apenas_um_show" class="card" data-id="apenas_um_show">
+  <img src="https://ntvb.tmsimg.com/assets/p8273235_b_h8_ar.jpg?w=1280&h=720">
+</a>
+<a href="streams.html?id=os_simpsons" class="card" data-id="os_simpsons">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.l3KZMlyB1jpP4BSnCtf7eAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3g">
+</a>
+<a href="streams.html?id=family_guy" class="card" data-id="family_guy">
+  <img src="https://wallpapercg.com/download/family-guy-4k-wallpaper-3840x2160-22251.jpg">
+</a>
+<a href="streams.html?id=south_park" class="card" data-id="south_park">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/d6f074a38d0e2e5b7c4d36ff7a9c26dd98333acb59903cc9178a0d68ac6d1029.jpg">
+  <div class="card-title"></div>
+</a>
+<a href="streams.html?id=o_incrivel_mundo_de_gumball" class="card" data-id="o_incrivel_mundo_de_gumball">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/60bc26f6542cac76de5415e0d3f0240fd17be11fbda34220277646dbc926e999.jpg">
+</a>
+<a href="streams.html?id=bob_esponja_calca_quadrada" class="card" data-id="bob_esponja_calca_quadrada">
+  <img src="https://plantillasparatazas.net/wp-content/uploads/2023/05/plantillas-para-tazas-bob-esponja-14.webp">
+</a>
+<a href="streams.html?id=du_dudu_e_edu" class="card" data-id="du_dudu_e_edu">
+  <img src="https://pm1.aminoapps.com/7120/dbe02bdf9d863857910ac0e026bb0e99a5e7b7d3r1-432-243v2_hq.jpg">
+</a>
+<a href="streams.html?id=pica_pau" class="card" data-id="pica_pau">
+  <img src="../assets/images/pica_pau.png">
+</a>
+<a href="streams.html?id=tom_e_jerry" class="card" data-id="tom_e_jerry">
+  <img src="https://tse3.mm.bing.net/th/id/OIP.iQie7pABhitduSC5Og6_bwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3">
+</a>
+<a href="streams.html?id=archer" class="card" data-id="archer">
+  <img src="https://bleedingcool.com/wp-content/uploads/2023/07/F1fcItKaYAIgDXW-1201x629.jpg">
+</a>
+<a href="streams.html?id=brooklyn_nine_nine" class="card" data-id="brooklyn_nine_nine">
+  <img src="https://image.tmdb.org/t/p/original/aNsrgElf0fiKBSR8cWWEL6XUTte.jpg">
+</a>
+</div>
+</div>
+
+<div class="row">
+<h3>Terror, Sobrevivência e Clássicos Cult</h3>
+<div class="carousel">
+  <a href="streams.html?id=bojack_horseman" class="card" data-id="bojack_horseman">
+    <img src="https://metadata-static.plex.tv/2/gracenote/24fce674d18eb58e4069138d92ca005b.jpg">
+  </a>
+  <a href="streams.html?id=over_the_garden_wall" class="card" data-id="over_the_garden_wall">
+    <img src="https://image.tmdb.org/t/p/original/7eplQ47U6M9CEmFWpwKvIYLGcR7.jpg">
+  </a>
+  <a href="streams.html?id=steven_universe" class="card" data-id="steven_universe">
+    <img src="../assets/images/steven_universe.png">
+  </a>
+  <a href="streams.html?id=noiva_cadaver" class="card" data-id="noiva_cadaver">
+    <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/10/noiva-cadaver.jpg?w=1080&h=608&crop=1">
+  </a>
+<a href="streams.html?id=o_silencio_dos_inocentes" class="card" data-id="o_silencio_dos_inocentes">
+  <img src="https://i.ytimg.com/vi/GBifCXpCMGI/maxresdefault.jpg">
+</a>
+<a href="streams.html?id=anabelle" class="card" data-id="anabelle">
+  <img src="https://m.media-amazon.com/images/S/pv-target-images/5a7b742b18a20233b679fdf5bea468bf8c92fbc434225d27b689912f67b6a064.jpg">
+</a>
+<a href="streams.html?id=chainsaw_man" class="card" data-id="chainsaw_man">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.NfvwF3CDFB9V1q5fmQlEMQHaEK?w=1850&h=1041&rs=1&pid=ImgDetMain&o=7&rm=3">
+</a>
+<a href="streams.html?id=bastardos_inglorios" class="card" data-id="bastardos_inglorios">
+  <img src="https://wallpapercave.com/wp/wp12267211.jpg">
+</a>
+<a href="streams.html?id=dahmer_um_canibal_americano" class="card" data-id="dahmer_um_canibal_americano">
+  <img src="https://th.bing.com/th/id/R.81a66e62cfd45c8cce785facdddc8a47?rik=Jw%2bp0PC0tUJlFQ&pid=ImgRaw&r=0">
+</a>
+<a href="streams.html?id=the_handmaids_tale" class="card" data-id="the_handmaids_tale">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.7N-ecDpcrEV-2hrGefFrnwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3">
+</a>
+<a href="streams.html?id=supernatural" class="card" data-id="supernatural">
+  <img src="https://wallpapercat.com/w/full/6/5/3/107311-3840x2160-desktop-4k-supernatural-background.jpg">
+</a>
+<a href="streams.html?id=a_viagem_de_chihiro" class="card" data-id="a_viagem_de_chihiro">
+  <img src="https://tse2.mm.bing.net/th/id/OIP.vkpxwU7Tzm7JZD57L_kh9QHaEK?w=512&h=288&rs=1&pid=ImgDetMain&o=7&rm=3">
+</a>
+<a href="streams.html?id=invocacao_do_mal" class="card" data-id="invocacao_do_mal">
+  <img src="https://delfos.net.br/wp-content/uploads/2021/05/invocacao-do-mal-3-destaque.jpg">
+</a>
+<a href="streams.html?id=re_zero_starting_life_in_another_world" class="card" data-id="re_zero_starting_life_in_another_world">
+  <img src="https://st.download.com.vn/data/image/2021/01/06/ReZERO-The-Prophecy-of-the-Throne-640.jpg">
+</a>
+</div>
+</div>
+</div>
+
+
+<footer class="footer">
+<div>© 2025 CineStream — Todos os direitos reservados</div>
+<div class="footer-links">
+ · <a href="termos.html">Termos</a> ·
+</div>
+</footer>
+
+</main>
+
+<script src="../assets/javaScript/home.js" type="module" ></script>
+<script src="../assets/javaScript/blobs.js"></script>
+</body>
+</html>
